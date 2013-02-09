@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DB8B10D9D814C9EB4B97621 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F828BB4E6E430C86DFFADA /* libPods.a */; };
+		AD5BB59F6A2344FEB4E7BC34 /* libPods-ActiveTouchExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0AE15C4C3248ABAC4501C9 /* libPods-ActiveTouchExampleTests.a */; };
+		C6CD911416C701BE00549206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911316C701BE00549206 /* UIKit.framework */; };
+		C6CD911616C701BE00549206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911516C701BE00549206 /* Foundation.framework */; };
+		C6CD911816C701BE00549206 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911716C701BE00549206 /* CoreGraphics.framework */; };
+		C6CD911E16C701BF00549206 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6CD911C16C701BF00549206 /* InfoPlist.strings */; };
+		C6CD912016C701BF00549206 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD911F16C701BF00549206 /* main.m */; };
+		C6CD912416C701BF00549206 /* ATAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD912316C701BF00549206 /* ATAppDelegate.m */; };
+		C6CD912616C701BF00549206 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C6CD912516C701BF00549206 /* Default.png */; };
+		C6CD912816C701BF00549206 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6CD912716C701BF00549206 /* Default@2x.png */; };
+		C6CD912A16C701BF00549206 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6CD912916C701BF00549206 /* Default-568h@2x.png */; };
+		C6CD912D16C701BF00549206 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CD912B16C701BF00549206 /* MainStoryboard.storyboard */; };
+		C6CD913016C701BF00549206 /* ATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CD912F16C701BF00549206 /* ATViewController.m */; };
+		C6CD913816C701BF00549206 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD913716C701BF00549206 /* SenTestingKit.framework */; };
+		C6CD913916C701BF00549206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911316C701BE00549206 /* UIKit.framework */; };
+		C6CD913A16C701BF00549206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911516C701BE00549206 /* Foundation.framework */; };
+		C6CD914216C701BF00549206 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6CD914016C701BF00549206 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6CD913B16C701BF00549206 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6CD910816C701BE00549206 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6CD910F16C701BE00549206;
+			remoteInfo = ActiveTouchExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17F828BB4E6E430C86DFFADA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		69DFAEEF16124DA694E4450C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		BBD3A2E45E5A4598BE868DCB /* Pods-ActiveTouchExampleTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveTouchExampleTests.xcconfig"; path = "Pods/Pods-ActiveTouchExampleTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		C6CD911016C701BE00549206 /* ActiveTouchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveTouchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6CD911316C701BE00549206 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C6CD911516C701BE00549206 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C6CD911716C701BE00549206 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C6CD911B16C701BE00549206 /* ActiveTouchExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActiveTouchExample-Info.plist"; sourceTree = "<group>"; };
+		C6CD911D16C701BF00549206 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C6CD911F16C701BF00549206 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C6CD912116C701BF00549206 /* ActiveTouchExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActiveTouchExample-Prefix.pch"; sourceTree = "<group>"; };
+		C6CD912216C701BF00549206 /* ATAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATAppDelegate.h; sourceTree = "<group>"; };
+		C6CD912316C701BF00549206 /* ATAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATAppDelegate.m; sourceTree = "<group>"; };
+		C6CD912516C701BF00549206 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C6CD912716C701BF00549206 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C6CD912916C701BF00549206 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C6CD912C16C701BF00549206 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C6CD912E16C701BF00549206 /* ATViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATViewController.h; sourceTree = "<group>"; };
+		C6CD912F16C701BF00549206 /* ATViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATViewController.m; sourceTree = "<group>"; };
+		C6CD913616C701BF00549206 /* ActiveTouchExampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveTouchExampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6CD913716C701BF00549206 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C6CD913F16C701BF00549206 /* ActiveTouchExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActiveTouchExampleTests-Info.plist"; sourceTree = "<group>"; };
+		C6CD914116C701BF00549206 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC0AE15C4C3248ABAC4501C9 /* libPods-ActiveTouchExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ActiveTouchExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6CD910D16C701BE00549206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CD911416C701BE00549206 /* UIKit.framework in Frameworks */,
+				C6CD911616C701BE00549206 /* Foundation.framework in Frameworks */,
+				C6CD911816C701BE00549206 /* CoreGraphics.framework in Frameworks */,
+				5DB8B10D9D814C9EB4B97621 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6CD913216C701BF00549206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CD913816C701BF00549206 /* SenTestingKit.framework in Frameworks */,
+				C6CD913916C701BF00549206 /* UIKit.framework in Frameworks */,
+				C6CD913A16C701BF00549206 /* Foundation.framework in Frameworks */,
+				AD5BB59F6A2344FEB4E7BC34 /* libPods-ActiveTouchExampleTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6CD910716C701BE00549206 = {
+			isa = PBXGroup;
+			children = (
+				C6CD911916C701BE00549206 /* ActiveTouchExample */,
+				C6CD913D16C701BF00549206 /* ActiveTouchExampleTests */,
+				C6CD911216C701BE00549206 /* Frameworks */,
+				C6CD911116C701BE00549206 /* Products */,
+				69DFAEEF16124DA694E4450C /* Pods.xcconfig */,
+				BBD3A2E45E5A4598BE868DCB /* Pods-ActiveTouchExampleTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		C6CD911116C701BE00549206 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD911016C701BE00549206 /* ActiveTouchExample.app */,
+				C6CD913616C701BF00549206 /* ActiveTouchExampleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6CD911216C701BE00549206 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD911316C701BE00549206 /* UIKit.framework */,
+				C6CD911516C701BE00549206 /* Foundation.framework */,
+				C6CD911716C701BE00549206 /* CoreGraphics.framework */,
+				C6CD913716C701BF00549206 /* SenTestingKit.framework */,
+				17F828BB4E6E430C86DFFADA /* libPods.a */,
+				EC0AE15C4C3248ABAC4501C9 /* libPods-ActiveTouchExampleTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6CD911916C701BE00549206 /* ActiveTouchExample */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD914E16C701C500549206 /* ActiveTouch */,
+				C6CD912216C701BF00549206 /* ATAppDelegate.h */,
+				C6CD912316C701BF00549206 /* ATAppDelegate.m */,
+				C6CD912B16C701BF00549206 /* MainStoryboard.storyboard */,
+				C6CD912E16C701BF00549206 /* ATViewController.h */,
+				C6CD912F16C701BF00549206 /* ATViewController.m */,
+				C6CD911A16C701BE00549206 /* Supporting Files */,
+			);
+			path = ActiveTouchExample;
+			sourceTree = "<group>";
+		};
+		C6CD911A16C701BE00549206 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD911B16C701BE00549206 /* ActiveTouchExample-Info.plist */,
+				C6CD911C16C701BF00549206 /* InfoPlist.strings */,
+				C6CD911F16C701BF00549206 /* main.m */,
+				C6CD912116C701BF00549206 /* ActiveTouchExample-Prefix.pch */,
+				C6CD912516C701BF00549206 /* Default.png */,
+				C6CD912716C701BF00549206 /* Default@2x.png */,
+				C6CD912916C701BF00549206 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6CD913D16C701BF00549206 /* ActiveTouchExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD915216C701F700549206 /* ActiveTouch */,
+				C6CD913E16C701BF00549206 /* Supporting Files */,
+			);
+			path = ActiveTouchExampleTests;
+			sourceTree = "<group>";
+		};
+		C6CD913E16C701BF00549206 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD913F16C701BF00549206 /* ActiveTouchExampleTests-Info.plist */,
+				C6CD914016C701BF00549206 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6CD914E16C701C500549206 /* ActiveTouch */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD915116C701D800549206 /* SpecHelper */,
+				C6CD915016C701D200549206 /* Database */,
+				C6CD914F16C701CD00549206 /* Model */,
+			);
+			name = ActiveTouch;
+			sourceTree = "<group>";
+		};
+		C6CD914F16C701CD00549206 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6CD915016C701D200549206 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		C6CD915116C701D800549206 /* SpecHelper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SpecHelper;
+			sourceTree = "<group>";
+		};
+		C6CD915216C701F700549206 /* ActiveTouch */ = {
+			isa = PBXGroup;
+			children = (
+				C6CD915416C7020800549206 /* Database */,
+				C6CD915316C701FF00549206 /* Model */,
+			);
+			name = ActiveTouch;
+			sourceTree = "<group>";
+		};
+		C6CD915316C701FF00549206 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6CD915416C7020800549206 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6CD910F16C701BE00549206 /* ActiveTouchExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6CD914816C701BF00549206 /* Build configuration list for PBXNativeTarget "ActiveTouchExample" */;
+			buildPhases = (
+				C6CD910C16C701BE00549206 /* Sources */,
+				C6CD910D16C701BE00549206 /* Frameworks */,
+				C6CD910E16C701BE00549206 /* Resources */,
+				3B8297DB730C44F587EE85C2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActiveTouchExample;
+			productName = ActiveTouchExample;
+			productReference = C6CD911016C701BE00549206 /* ActiveTouchExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C6CD913516C701BF00549206 /* ActiveTouchExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6CD914B16C701BF00549206 /* Build configuration list for PBXNativeTarget "ActiveTouchExampleTests" */;
+			buildPhases = (
+				C6CD913116C701BF00549206 /* Sources */,
+				C6CD913216C701BF00549206 /* Frameworks */,
+				C6CD913316C701BF00549206 /* Resources */,
+				C6CD913416C701BF00549206 /* ShellScript */,
+				FA2511FB97124827B87F14ED /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6CD913C16C701BF00549206 /* PBXTargetDependency */,
+			);
+			name = ActiveTouchExampleTests;
+			productName = ActiveTouchExampleTests;
+			productReference = C6CD913616C701BF00549206 /* ActiveTouchExampleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6CD910816C701BE00549206 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AT;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ActiveTouch;
+			};
+			buildConfigurationList = C6CD910B16C701BE00549206 /* Build configuration list for PBXProject "ActiveTouchExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C6CD910716C701BE00549206;
+			productRefGroup = C6CD911116C701BE00549206 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6CD910F16C701BE00549206 /* ActiveTouchExample */,
+				C6CD913516C701BF00549206 /* ActiveTouchExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6CD910E16C701BE00549206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CD911E16C701BF00549206 /* InfoPlist.strings in Resources */,
+				C6CD912616C701BF00549206 /* Default.png in Resources */,
+				C6CD912816C701BF00549206 /* Default@2x.png in Resources */,
+				C6CD912A16C701BF00549206 /* Default-568h@2x.png in Resources */,
+				C6CD912D16C701BF00549206 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6CD913316C701BF00549206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CD914216C701BF00549206 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B8297DB730C44F587EE85C2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		C6CD913416C701BF00549206 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		FA2511FB97124827B87F14ED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ActiveTouchExampleTests-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6CD910C16C701BE00549206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CD912016C701BF00549206 /* main.m in Sources */,
+				C6CD912416C701BF00549206 /* ATAppDelegate.m in Sources */,
+				C6CD913016C701BF00549206 /* ATViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6CD913116C701BF00549206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6CD913C16C701BF00549206 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6CD910F16C701BE00549206 /* ActiveTouchExample */;
+			targetProxy = C6CD913B16C701BF00549206 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C6CD911C16C701BF00549206 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6CD911D16C701BF00549206 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C6CD912B16C701BF00549206 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6CD912C16C701BF00549206 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		C6CD914016C701BF00549206 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6CD914116C701BF00549206 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6CD914616C701BF00549206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C6CD914716C701BF00549206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6CD914916C701BF00549206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69DFAEEF16124DA694E4450C /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ActiveTouchExample/ActiveTouchExample-Prefix.pch";
+				INFOPLIST_FILE = "ActiveTouchExample/ActiveTouchExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C6CD914A16C701BF00549206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69DFAEEF16124DA694E4450C /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ActiveTouchExample/ActiveTouchExample-Prefix.pch";
+				INFOPLIST_FILE = "ActiveTouchExample/ActiveTouchExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C6CD914C16C701BF00549206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBD3A2E45E5A4598BE868DCB /* Pods-ActiveTouchExampleTests.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "${inherited}";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ActiveTouchExample.app/ActiveTouchExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ActiveTouchExample/ActiveTouchExample-Prefix.pch";
+				INFOPLIST_FILE = "ActiveTouchExampleTests/ActiveTouchExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C6CD914D16C701BF00549206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBD3A2E45E5A4598BE868DCB /* Pods-ActiveTouchExampleTests.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "${inherited}";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ActiveTouchExample.app/ActiveTouchExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ActiveTouchExample/ActiveTouchExample-Prefix.pch";
+				INFOPLIST_FILE = "ActiveTouchExampleTests/ActiveTouchExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6CD910B16C701BE00549206 /* Build configuration list for PBXProject "ActiveTouchExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6CD914616C701BF00549206 /* Debug */,
+				C6CD914716C701BF00549206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6CD914816C701BF00549206 /* Build configuration list for PBXNativeTarget "ActiveTouchExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6CD914916C701BF00549206 /* Debug */,
+				C6CD914A16C701BF00549206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6CD914B16C701BF00549206 /* Build configuration list for PBXNativeTarget "ActiveTouchExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6CD914C16C701BF00549206 /* Debug */,
+				C6CD914D16C701BF00549206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6CD910816C701BE00549206 /* Project object */;
+}
