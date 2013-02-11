@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5DB8B10D9D814C9EB4B97621 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F828BB4E6E430C86DFFADA /* libPods.a */; };
 		AD5BB59F6A2344FEB4E7BC34 /* libPods-ActiveTouchExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0AE15C4C3248ABAC4501C9 /* libPods-ActiveTouchExampleTests.a */; };
+		C607138A16C862260066805C /* ATModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C607138916C862260066805C /* ATModelSpec.m */; };
+		C607138D16C894080066805C /* ATDatabaseCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = C607138C16C894080066805C /* ATDatabaseCleaner.m */; };
 		C6CD911416C701BE00549206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911316C701BE00549206 /* UIKit.framework */; };
 		C6CD911616C701BE00549206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911516C701BE00549206 /* Foundation.framework */; };
 		C6CD911816C701BE00549206 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911716C701BE00549206 /* CoreGraphics.framework */; };
@@ -42,6 +44,9 @@
 		17F828BB4E6E430C86DFFADA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DFAEEF16124DA694E4450C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BBD3A2E45E5A4598BE868DCB /* Pods-ActiveTouchExampleTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveTouchExampleTests.xcconfig"; path = "Pods/Pods-ActiveTouchExampleTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		C607138916C862260066805C /* ATModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATModelSpec.m; path = ActiveTouch/Model/ATModelSpec.m; sourceTree = "<group>"; };
+		C607138B16C894080066805C /* ATDatabaseCleaner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATDatabaseCleaner.h; path = ActiveTouch/SpecHelpers/ATDatabaseCleaner.h; sourceTree = "<group>"; };
+		C607138C16C894080066805C /* ATDatabaseCleaner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATDatabaseCleaner.m; path = ActiveTouch/SpecHelpers/ATDatabaseCleaner.m; sourceTree = "<group>"; };
 		C6CD911016C701BE00549206 /* ActiveTouchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveTouchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CD911316C701BE00549206 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6CD911516C701BE00549206 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -203,6 +208,8 @@
 		C6CD915116C701D800549206 /* SpecHelper */ = {
 			isa = PBXGroup;
 			children = (
+				C607138B16C894080066805C /* ATDatabaseCleaner.h */,
+				C607138C16C894080066805C /* ATDatabaseCleaner.m */,
 			);
 			name = SpecHelper;
 			sourceTree = "<group>";
@@ -219,6 +226,7 @@
 		C6CD915316C701FF00549206 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C607138916C862260066805C /* ATModelSpec.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 				C6CD912416C701BF00549206 /* ATAppDelegate.m in Sources */,
 				C6CD913016C701BF00549206 /* ATViewController.m in Sources */,
 				C6CD915B16C7588C00549206 /* ATDatabaseContainer.m in Sources */,
+				C607138D16C894080066805C /* ATDatabaseCleaner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6CD915816C7583200549206 /* ATDatabaseContainerSpec.m in Sources */,
+				C607138A16C862260066805C /* ATModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
