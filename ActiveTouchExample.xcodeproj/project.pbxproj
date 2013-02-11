@@ -13,6 +13,7 @@
 		C607138D16C894080066805C /* ATDatabaseCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = C607138C16C894080066805C /* ATDatabaseCleaner.m */; };
 		C607139016C89EC80066805C /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = C607138F16C89EC80066805C /* Car.m */; };
 		C607139316C89EF10066805C /* ATModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C607139216C89EF10066805C /* ATModel.m */; };
+		C607139716C8AD2B0066805C /* ATBeValidMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C607139616C8AD2B0066805C /* ATBeValidMatcher.m */; };
 		C6CD911416C701BE00549206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911316C701BE00549206 /* UIKit.framework */; };
 		C6CD911616C701BE00549206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911516C701BE00549206 /* Foundation.framework */; };
 		C6CD911816C701BE00549206 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911716C701BE00549206 /* CoreGraphics.framework */; };
@@ -53,6 +54,8 @@
 		C607138F16C89EC80066805C /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Car.m; path = ActiveTouch/Model/Car.m; sourceTree = "<group>"; };
 		C607139116C89EF10066805C /* ATModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATModel.h; path = ActiveTouch/Model/ATModel.h; sourceTree = "<group>"; };
 		C607139216C89EF10066805C /* ATModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATModel.m; path = ActiveTouch/Model/ATModel.m; sourceTree = "<group>"; };
+		C607139516C8AD2B0066805C /* ATBeValidMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATBeValidMatcher.h; path = ActiveTouch/SpecHelpers/Matchers/ATBeValidMatcher.h; sourceTree = "<group>"; };
+		C607139616C8AD2B0066805C /* ATBeValidMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATBeValidMatcher.m; path = ActiveTouch/SpecHelpers/Matchers/ATBeValidMatcher.m; sourceTree = "<group>"; };
 		C6CD911016C701BE00549206 /* ActiveTouchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveTouchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CD911316C701BE00549206 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6CD911516C701BE00549206 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C607139416C8AC6E0066805C /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				C607139516C8AD2B0066805C /* ATBeValidMatcher.h */,
+				C607139616C8AD2B0066805C /* ATBeValidMatcher.m */,
+			);
+			name = Matchers;
+			sourceTree = "<group>";
+		};
 		C6CD910716C701BE00549206 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +228,7 @@
 		C6CD915116C701D800549206 /* SpecHelper */ = {
 			isa = PBXGroup;
 			children = (
+				C607139416C8AC6E0066805C /* Matchers */,
 				C607138B16C894080066805C /* ATDatabaseCleaner.h */,
 				C607138C16C894080066805C /* ATDatabaseCleaner.m */,
 			);
@@ -396,6 +409,7 @@
 				C6CD915B16C7588C00549206 /* ATDatabaseContainer.m in Sources */,
 				C607138D16C894080066805C /* ATDatabaseCleaner.m in Sources */,
 				C607139316C89EF10066805C /* ATModel.m in Sources */,
+				C607139716C8AD2B0066805C /* ATBeValidMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
