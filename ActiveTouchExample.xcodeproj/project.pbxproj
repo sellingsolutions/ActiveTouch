@@ -11,9 +11,11 @@
 		AD5BB59F6A2344FEB4E7BC34 /* libPods-ActiveTouchExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0AE15C4C3248ABAC4501C9 /* libPods-ActiveTouchExampleTests.a */; };
 		C607138A16C862260066805C /* ATModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C607138916C862260066805C /* ATModelSpec.m */; };
 		C607138D16C894080066805C /* ATDatabaseCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = C607138C16C894080066805C /* ATDatabaseCleaner.m */; };
-		C607139016C89EC80066805C /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = C607138F16C89EC80066805C /* Car.m */; };
 		C607139316C89EF10066805C /* ATModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C607139216C89EF10066805C /* ATModel.m */; };
 		C607139716C8AD2B0066805C /* ATBeValidMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C607139616C8AD2B0066805C /* ATBeValidMatcher.m */; };
+		C607139916C932930066805C /* ATModelIntegrationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C607139816C932930066805C /* ATModelIntegrationSpec.m */; };
+		C607139D16C942EB0066805C /* ATRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C607139C16C942EB0066805C /* ATRuntimeHelper.m */; };
+		C60713A616C94EBA0066805C /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = C60713A516C94EBA0066805C /* Car.m */; };
 		C6CD911416C701BE00549206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911316C701BE00549206 /* UIKit.framework */; };
 		C6CD911616C701BE00549206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911516C701BE00549206 /* Foundation.framework */; };
 		C6CD911816C701BE00549206 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CD911716C701BE00549206 /* CoreGraphics.framework */; };
@@ -50,12 +52,15 @@
 		C607138916C862260066805C /* ATModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATModelSpec.m; path = ActiveTouch/Model/ATModelSpec.m; sourceTree = "<group>"; };
 		C607138B16C894080066805C /* ATDatabaseCleaner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATDatabaseCleaner.h; path = ActiveTouch/SpecHelpers/ATDatabaseCleaner.h; sourceTree = "<group>"; };
 		C607138C16C894080066805C /* ATDatabaseCleaner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATDatabaseCleaner.m; path = ActiveTouch/SpecHelpers/ATDatabaseCleaner.m; sourceTree = "<group>"; };
-		C607138E16C89EC80066805C /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Car.h; path = ActiveTouch/Model/Car.h; sourceTree = "<group>"; };
-		C607138F16C89EC80066805C /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Car.m; path = ActiveTouch/Model/Car.m; sourceTree = "<group>"; };
 		C607139116C89EF10066805C /* ATModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATModel.h; path = ActiveTouch/Model/ATModel.h; sourceTree = "<group>"; };
 		C607139216C89EF10066805C /* ATModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATModel.m; path = ActiveTouch/Model/ATModel.m; sourceTree = "<group>"; };
 		C607139516C8AD2B0066805C /* ATBeValidMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATBeValidMatcher.h; path = ActiveTouch/SpecHelpers/Matchers/ATBeValidMatcher.h; sourceTree = "<group>"; };
 		C607139616C8AD2B0066805C /* ATBeValidMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATBeValidMatcher.m; path = ActiveTouch/SpecHelpers/Matchers/ATBeValidMatcher.m; sourceTree = "<group>"; };
+		C607139816C932930066805C /* ATModelIntegrationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATModelIntegrationSpec.m; sourceTree = "<group>"; };
+		C607139B16C942EB0066805C /* ATRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATRuntimeHelper.h; path = ActiveTouch/Helper/ATRuntimeHelper.h; sourceTree = "<group>"; };
+		C607139C16C942EB0066805C /* ATRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATRuntimeHelper.m; path = ActiveTouch/Helper/ATRuntimeHelper.m; sourceTree = "<group>"; };
+		C60713A416C94EBA0066805C /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		C60713A516C94EBA0066805C /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		C6CD911016C701BE00549206 /* ActiveTouchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveTouchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CD911316C701BE00549206 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6CD911516C701BE00549206 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +122,15 @@
 			name = Matchers;
 			sourceTree = "<group>";
 		};
+		C607139A16C942B30066805C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C607139B16C942EB0066805C /* ATRuntimeHelper.h */,
+				C607139C16C942EB0066805C /* ATRuntimeHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		C6CD910716C701BE00549206 = {
 			isa = PBXGroup;
 			children = (
@@ -157,9 +171,11 @@
 				C6CD914E16C701C500549206 /* ActiveTouch */,
 				C6CD912216C701BF00549206 /* ATAppDelegate.h */,
 				C6CD912316C701BF00549206 /* ATAppDelegate.m */,
-				C6CD912B16C701BF00549206 /* MainStoryboard.storyboard */,
 				C6CD912E16C701BF00549206 /* ATViewController.h */,
 				C6CD912F16C701BF00549206 /* ATViewController.m */,
+				C60713A416C94EBA0066805C /* Car.h */,
+				C60713A516C94EBA0066805C /* Car.m */,
+				C6CD912B16C701BF00549206 /* MainStoryboard.storyboard */,
 				C6CD911A16C701BE00549206 /* Supporting Files */,
 			);
 			path = ActiveTouchExample;
@@ -200,6 +216,7 @@
 		C6CD914E16C701C500549206 /* ActiveTouch */ = {
 			isa = PBXGroup;
 			children = (
+				C607139A16C942B30066805C /* Helper */,
 				C6CD915116C701D800549206 /* SpecHelper */,
 				C6CD915016C701D200549206 /* Database */,
 				C6CD914F16C701CD00549206 /* Model */,
@@ -247,9 +264,8 @@
 		C6CD915316C701FF00549206 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C607139816C932930066805C /* ATModelIntegrationSpec.m */,
 				C607138916C862260066805C /* ATModelSpec.m */,
-				C607138E16C89EC80066805C /* Car.h */,
-				C607138F16C89EC80066805C /* Car.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -410,6 +426,8 @@
 				C607138D16C894080066805C /* ATDatabaseCleaner.m in Sources */,
 				C607139316C89EF10066805C /* ATModel.m in Sources */,
 				C607139716C8AD2B0066805C /* ATBeValidMatcher.m in Sources */,
+				C607139D16C942EB0066805C /* ATRuntimeHelper.m in Sources */,
+				C60713A616C94EBA0066805C /* Car.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +437,7 @@
 			files = (
 				C6CD915816C7583200549206 /* ATDatabaseContainerSpec.m in Sources */,
 				C607138A16C862260066805C /* ATModelSpec.m in Sources */,
-				C607139016C89EC80066805C /* Car.m in Sources */,
+				C607139916C932930066805C /* ATModelIntegrationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

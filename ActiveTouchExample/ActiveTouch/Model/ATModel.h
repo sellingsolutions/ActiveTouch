@@ -14,6 +14,8 @@
 @property (nonatomic, copy, readonly) NSString *_id;
 @property (nonatomic, copy, readonly) NSString *_rev;
 
+
++ (void)registerView;
 + (void)allWithSuccessBlock:(void(^)(NSArray *collection))successBlock withErrorBlock:(void(^)(NSError *error))errorBlock;
 + (id)findByID:(NSString *)_id;
 

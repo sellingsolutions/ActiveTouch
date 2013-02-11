@@ -7,12 +7,13 @@
 //
 
 #import "ATAppDelegate.h"
+#import "ATDatabaseContainer.h"
 
 @implementation ATAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[ATDatabaseContainer sharedInstance] openDatabaseWithName:@"active_touch_example_database"];
     return YES;
 }
 							

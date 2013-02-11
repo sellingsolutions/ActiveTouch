@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class ATDatabaseContainer;
+
 @interface ATDatabaseCleaner : NSObject
 
++ (ATDatabaseContainer *)databaseContainer;
 + (void)openTestDatabaseNamed:(NSString *)databaseName;
 + (void)cleanDatabase;
++ (void)removeDatabase;
 
 @end

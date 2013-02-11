@@ -8,6 +8,8 @@
 
 #import "ATDatabaseContainer.h"
 #import <CouchCocoa/CouchCocoa.h>
+#import "ATRuntimeHelper.h"
+#import "ATModel.h"
 
 @implementation ATDatabaseContainer
 
@@ -28,6 +30,16 @@
     NSError *error;
     if (![_database ensureCreated:&error]) {
         @throw ([NSException exceptionWithName:@"ATDatabaseException" reason:@"Database was not initialized" userInfo:nil]);
+    }
+    [self registerViews];
+}
+
+- (void)registerViews
+{
+    NSArray *modelClasses = [ATRuntimeHelper classesThatInheritFromATModel];
+    for (id modelClass in modelClasses) {
+        [modelClass registerView];
+        NSLog(@"Registering views for class: %@", [modelClass description]);
     }
 }
 
