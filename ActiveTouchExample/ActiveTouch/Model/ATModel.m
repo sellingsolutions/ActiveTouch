@@ -51,7 +51,34 @@
 
 - (void)createWithSuccessBlock:(void (^)(void))successBlock withErrorBlock:(void (^)(NSError *))errorBlock
 {
-
+    if ([self isValid]) {
+    
+        CouchDocument *document = [[[ATDatabaseContainer sharedInstance] database] untitledDocument];
+        RESTOperation *operation = [document putProperties:[self externalRepresentation]];
+        [operation onCompletion:^{
+            
+            if (operation.error) {
+                errorBlock(operation.error);
+            } else {
+                
+                NSString *identifier = [[[operation responseBody] fromJSON] objectForKey:@"id"];
+                NSString *revision = [[[operation responseBody] fromJSON] objectForKey:@"rev"];
+                
+                __id = identifier;
+                __rev = revision;
+                
+                successBlock();
+            }
+            
+        }];
+        [operation start];
+        
+    } else {
+        NSMutableDictionary* details = [NSMutableDictionary dictionary];
+        [details setValue:@"validation failed" forKey:NSLocalizedDescriptionKey];
+        NSError *error = [[NSError alloc] initWithDomain:@"com.activetouch.model.validation" code:500 userInfo:details];
+        errorBlock(error);
+    }
 }
 
 - (void)destroyWithSuccessBlock:(void (^)(void))successBlock withErrorBlock:(void (^)(NSError *))errorBlock
