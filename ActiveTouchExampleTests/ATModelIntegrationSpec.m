@@ -79,6 +79,54 @@ describe(@"ATModel", ^{
         
     });
     
+    describe(@".allWithLimit:skipping:withSuccessBlock:withErrorBlock", ^{
+        
+        __block NSArray *cars;
+        __block NSArray *expectedCars;
+        __block NSError *expectedError;
+        
+        beforeEach(^{
+            
+            CMFactory *carsFactory = [CMFactory forClass:[Car class]];
+            [carsFactory addToField:@"model" sequenceValue:^(NSUInteger sequence) {
+                return [NSString stringWithFormat:@"Model%d", sequence];
+            }];
+            cars = [carsFactory buildWithCapacity:10];
+            
+            for(Car *car in cars) {
+                
+                CouchDocument *document = [[[ATDatabaseCleaner databaseContainer] database] untitledDocument];
+                RESTOperation *operation = [document putProperties:[car externalRepresentation]];
+                [operation start];
+                [operation onCompletion:^{
+                    if (!operation.error) {
+                        NSLog(@"Car with model: %@, was saved", car.model);
+                    }
+                }];
+                
+            }
+            [Car allWithLimit:5 skipping:0 withSuccessBlock:^(NSArray *collection) {
+                expectedCars = collection;
+            } withErrorBlock:^(NSError *error) {
+                expectedError = error;
+            }];
+            
+        });
+        
+        specify(^{
+            [[expectFutureValue(expectedCars) shouldEventually] beNonNil];
+        });
+        
+        specify(^{
+            [[expectFutureValue(theValue([expectedCars count])) shouldEventually] equal:theValue(5)];
+        });
+        
+        specify(^{
+            [[expectFutureValue(expectedError) shouldEventually] beNil];
+        });
+        
+    });
+    
     describe(@".findById:", ^{
        
         __block Car *expectedCar;

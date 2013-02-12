@@ -23,6 +23,39 @@
     return model;
 }
 
++ (void)allWithLimit:(NSUInteger)limit
+            skipping:(NSUInteger)skip
+
+    withSuccessBlock:(void (^)(NSArray *))successBlock withErrorBlock:(void (^)(NSError *))errorBlock
+{
+    NSString *documentDesign = [self documentDesignName];
+    NSString *viewName = [self viewName];
+    CouchDatabase *database = [[ATDatabaseContainer sharedInstance] database];
+    CouchDesignDocument *colletionDesign = [database designDocumentWithName:documentDesign];
+    CouchQuery *query = [colletionDesign queryViewNamed:viewName];
+    query.limit = limit;
+    query.skip = skip;
+    RESTOperation *operation = [query start];
+    [operation onCompletion:^{
+        
+        if (operation.error) {
+            errorBlock(operation.error);
+        } else {
+            
+            NSMutableArray *collection = [NSMutableArray array];
+            for (CouchQueryRow* row in query.rows) {
+                NSString *className = [row.value objectForKey:@"active_touch_model_class"];
+                Class class = NSClassFromString(className);
+                id model = [[class alloc] initWithExternalRepresentation:row.value];
+                [collection addObject:model];
+            }
+            successBlock(collection);
+            
+        }
+        
+    }];
+}
+
 + (void)allWithSuccessBlock:(void (^)(NSArray *))successBlock withErrorBlock:(void (^)(NSError *))errorBlock
 {
     NSString *documentDesign = [self documentDesignName];
