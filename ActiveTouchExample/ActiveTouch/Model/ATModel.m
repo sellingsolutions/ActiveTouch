@@ -16,7 +16,9 @@
 
 + (id)findByID:(NSString *)_id
 {
-    return nil;
+    CouchDocument *document = [[[ATDatabaseContainer sharedInstance] database] documentWithID:_id];
+    id model = [[self alloc] initWithExternalRepresentation:[document properties]];
+    return model;
 }
 
 + (void)allWithSuccessBlock:(void (^)(NSArray *))successBlock withErrorBlock:(void (^)(NSError *))errorBlock

@@ -77,7 +77,7 @@ describe(@"ATModel", ^{
             __block Car *car;
             
             beforeEach(^{
-                externalRepresentation = @{ @"_id" : @"1234", @"_rev" : @"4321", @"model" : @"Classic", @"year" : [NSDate date]};
+                externalRepresentation = @{ @"_id" : @"1234", @"_rev" : @"4321", @"model" : @"Classic", @"year" : @"2011"};
                 car = [[Car alloc] initWithExternalRepresentation:externalRepresentation];
             });
             
@@ -107,7 +107,7 @@ describe(@"ATModel", ^{
         __block Car *car;
         
         beforeEach(^{
-            NSDictionary *expectedRepresentantion = @{ @"_id" : @"1234", @"_rev" : @"4321", @"model" : @"Classic", @"year" : [NSDate date]};
+            NSDictionary *expectedRepresentantion = @{ @"_id" : @"1234", @"_rev" : @"4321", @"model" : @"Classic", @"year" : @"2011"};
             car = [[Car alloc] initWithExternalRepresentation:expectedRepresentantion];
             externalRepresentation = [car externalRepresentation];
         });

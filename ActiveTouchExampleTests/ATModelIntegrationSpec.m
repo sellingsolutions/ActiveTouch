@@ -21,6 +21,7 @@ beforeAll(^{
 });
 
 beforeEach(^{
+    [ATDatabaseContainer stub:@selector(sharedInstance) andReturn:[ATDatabaseCleaner databaseContainer]];
     [ATDatabaseCleaner cleanDatabase];
 });
 
@@ -46,7 +47,7 @@ describe(@"ATModel", ^{
             
             for(Car *car in cars) {
                 
-                CouchDocument *document = [[[ATDatabaseContainer sharedInstance] database] untitledDocument];
+                CouchDocument *document = [[[ATDatabaseCleaner databaseContainer] database] untitledDocument];
                 RESTOperation *operation = [document putProperties:[car externalRepresentation]];
                 [operation start];
                 [operation onCompletion:^{
@@ -74,6 +75,49 @@ describe(@"ATModel", ^{
         
         specify(^{
             [[expectFutureValue(expectedError) shouldEventually] beNil];
+        });
+        
+    });
+    
+    describe(@".findById:", ^{
+       
+        __block Car *expectedCar;
+        __block Car *car;
+        
+        beforeEach(^{
+           
+            CMFactory *factory = [CMFactory forClass:[Car class]];
+            [factory addToField:@"model" value:^id{
+               return @"Classic";
+            }];
+            [factory addToField:@"year" value:^id{
+                return @"2011";
+            }];
+            expectedCar = [factory build];
+            CouchDatabase *database = [[ATDatabaseCleaner databaseContainer] database];
+            CouchDocument *document = [database untitledDocument];
+            NSDictionary *externalRepresentation = [expectedCar externalRepresentation];
+            RESTOperation *operation = [document putProperties:externalRepresentation];
+            [operation start];
+            [operation onCompletion:^{
+                if (!operation.error) {
+                    NSString *_id = [[[operation responseBody] fromJSON] objectForKey:@"id"];
+                    car = [Car findByID:_id];
+                }
+            }];
+            
+        });
+        
+        specify(^{
+            [[expectFutureValue(car) shouldEventually] beNonNil];
+        });
+        
+        specify(^{
+            [[expectFutureValue(car.model) shouldEventually] equal:expectedCar.model];
+        });
+        
+        specify(^{
+            [[expectFutureValue(car.year) shouldEventually] equal:expectedCar.year];
         });
         
     });

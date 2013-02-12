@@ -12,7 +12,7 @@
 #import "Kiwi.h"
 
 static ATDatabaseContainer *__container = nil;
-static NSOperationQueue *__operationQueue;
+static NSOperationQueue *__operationQueue = nil;
 
 @implementation ATDatabaseCleaner
 
