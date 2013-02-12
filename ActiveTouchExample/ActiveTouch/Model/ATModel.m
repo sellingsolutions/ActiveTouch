@@ -13,7 +13,6 @@
 
 @implementation ATModel
 
-
 + (id)findByID:(NSString *)_id
 {
     CouchDocument *document = [[[ATDatabaseContainer sharedInstance] database] documentWithID:_id];
@@ -100,6 +99,27 @@
 
 - (void)updateWithSuccessBlock:(void (^)(void))successBlock withErrorBlock:(void (^)(NSError *))errorBlock
 {
+    if ([self isValid]) {
+        
+        CouchDocument *document = [[[ATDatabaseContainer sharedInstance] database] documentWithID:__id];
+        RESTOperation *operation = [document putProperties:[self externalRepresentation]];
+        [operation onCompletion:^{
+            
+            if (operation.error) {
+                errorBlock(operation.error);
+            } else {
+                successBlock();
+            }
+            
+        }];
+        [operation start];
+        
+    } else {
+        NSMutableDictionary* details = [NSMutableDictionary dictionary];
+        [details setValue:@"validation failed" forKey:NSLocalizedDescriptionKey];
+        NSError *error = [[NSError alloc] initWithDomain:@"com.activetouch.model.validation" code:500 userInfo:details];
+        errorBlock(error);
+    }
 }
 
 - (BOOL)isValid

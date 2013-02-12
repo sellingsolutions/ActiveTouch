@@ -39,13 +39,13 @@ static ATDatabaseContainer *__container = nil;
 
 + (void)removeDatabase
 {
-        [__container closeDatabase];
-        [__container closeServer];
-        __container = nil;
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
-        NSMutableString *path = [NSMutableString stringWithString:[paths objectAtIndex:0]];
-        [path appendString:@"/TouchDB"];
-        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    [__container closeDatabase];
+    [__container closeServer];
+    __container = nil;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
+    NSMutableString *path = [NSMutableString stringWithString:[paths objectAtIndex:0]];
+    [path appendString:@"/TouchDB"];
+    [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 }
 
 @end

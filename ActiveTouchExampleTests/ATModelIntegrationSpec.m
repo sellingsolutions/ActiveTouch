@@ -201,6 +201,53 @@ describe(@"ATModel", ^{
         
     });
     
+    describe(@"#updateWithSuccessBlock:withErrorBlock", ^{
+        
+        __block Car *car;
+        __block BOOL updated;
+        __block NSError *expectedError;
+        
+        beforeEach(^{
+            
+            updated = NO;
+            
+            CMFactory *factory = [CMFactory forClass:[Car class]];
+            [factory addToField:@"model" value:^id{
+                return @"Classic";
+            }];
+            [factory addToField:@"year" value:^id{
+                return @"2011";
+            }];
+            car = [factory build];
+            [car createWithSuccessBlock:^{
+                
+                car.model = @"Civic";
+                [car updateWithSuccessBlock:^{
+                    updated = YES;
+                } withErrorBlock:^(NSError *error) {
+                    
+                }];
+                
+            } withErrorBlock:^(NSError *error) {
+                expectedError = error;
+            }];
+            
+        });
+        
+        specify(^{
+            [[expectFutureValue(car.model) shouldEventually] equal:@"Civic"];
+        });
+        
+        specify(^{
+            [[expectFutureValue(theValue(updated)) shouldEventually] beTrue];
+        });
+        
+        specify(^{
+            [[expectFutureValue(expectedError) shouldEventually] beNil];
+        });
+        
+    });
+    
 });
 
 SPEC_END
