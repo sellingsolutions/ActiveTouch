@@ -17,6 +17,9 @@
 + (id)findByID:(NSString *)_id
 {
     CouchDocument *document = [[[ATDatabaseContainer sharedInstance] database] documentWithID:_id];
+    if (!document || [[[document properties] objectForKey:@"_deleted"] boolValue]) {
+        return nil;
+    }
     id model = [[self alloc] initWithExternalRepresentation:[document properties]];
     return model;
 }
@@ -83,7 +86,16 @@
 
 - (void)destroyWithSuccessBlock:(void (^)(void))successBlock withErrorBlock:(void (^)(NSError *))errorBlock
 {
-
+    CouchDocument *document = [[[ATDatabaseContainer sharedInstance] database] documentWithID:__id];
+    RESTOperation *operation = [document DELETE];
+    [operation onCompletion:^{
+        if (operation.error) {
+            errorBlock(operation.error);
+        } else {
+            successBlock();
+        }
+    }];
+    [operation start];
 }
 
 - (void)updateWithSuccessBlock:(void (^)(void))successBlock withErrorBlock:(void (^)(NSError *))errorBlock

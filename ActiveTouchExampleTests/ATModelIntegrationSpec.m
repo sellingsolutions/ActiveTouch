@@ -159,6 +159,48 @@ describe(@"ATModel", ^{
         
     });
     
+    describe(@"#destroyWithSuccessBlock:withErrorBlock", ^{
+        
+        __block Car *carToBeDestroyed;
+        __block Car *retrievedCar;
+        __block NSError *expectedError;
+        
+        beforeEach(^{
+            
+            CMFactory *factory = [CMFactory forClass:[Car class]];
+            [factory addToField:@"model" value:^id{
+                return @"Classic";
+            }];
+            [factory addToField:@"year" value:^id{
+                return @"2011";
+            }];
+            carToBeDestroyed = [factory build];
+            [carToBeDestroyed createWithSuccessBlock:^{
+            
+                [carToBeDestroyed destroyWithSuccessBlock:^{
+                    retrievedCar = [Car findByID:carToBeDestroyed._id];
+                    NSLog(@"Car destroyed");
+                } withErrorBlock:^(NSError *error) {
+                    expectedError = error;
+                }];
+                
+            } withErrorBlock:^(NSError *error) {
+                expectedError = error;
+            }];
+            
+            
+        });
+        
+        specify(^{
+            [[expectFutureValue(retrievedCar) shouldEventually] beNil];
+        });
+        
+        specify(^{
+            [[expectFutureValue(expectedError) shouldEventually] beNil];
+        });
+        
+    });
+    
 });
 
 SPEC_END
