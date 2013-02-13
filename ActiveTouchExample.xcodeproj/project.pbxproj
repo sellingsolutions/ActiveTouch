@@ -64,6 +64,7 @@
 		C60713A516C94EBA0066805C /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		C6981BA616CA8BEF0009E0F3 /* ATFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATFormViewController.h; sourceTree = "<group>"; };
 		C6981BA716CA8BEF0009E0F3 /* ATFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATFormViewController.m; sourceTree = "<group>"; };
+		C6981BDC16CBFC130009E0F3 /* ActiveTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActiveTouch.h; path = ActiveTouch/ActiveTouch.h; sourceTree = "<group>"; };
 		C6CD911016C701BE00549206 /* ActiveTouchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveTouchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CD911316C701BE00549206 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6CD911516C701BE00549206 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -249,6 +250,7 @@
 				C6CD915116C701D800549206 /* SpecHelper */,
 				C6CD915016C701D200549206 /* Database */,
 				C6CD914F16C701CD00549206 /* Model */,
+				C6981BDC16CBFC130009E0F3 /* ActiveTouch.h */,
 			);
 			name = ActiveTouch;
 			sourceTree = "<group>";
