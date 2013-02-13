@@ -114,6 +114,7 @@ Car *car = [Car findById:@"12312-ASADSD"];
 	ATModel has a method called isValid that returns a BOOL, by default it returns YES.
 	If you want some sort of validation you can override it and validates the model as you wish.
 
+
 * Creating a car:
 
 ```objective-c
@@ -151,6 +152,45 @@ car.year = @"aYear";
 } withErrorBlock:^(NSError *error) {
    
 }];
+
+```
+
+## Testing
+
+* ActiveTouch has support for running integration tests what you need to do is setup your kiwi specs like this:
+
+```objective-c
+
+#import "ATDatabaseTestRunner.h"
+#import "ATDatabaseContainer.h"
+#import "Kiwi.h"
+
+SPEC_BEGIN(ATModelIntegrationSpec)
+
+beforeAll(^{
+    [ATDatabaseTestRunner openTestDatabaseNamed:@"your_test_database"];
+});
+
+beforeEach(^{
+    [ATDatabaseContainer stub:@selector(sharedInstance) andReturn:[ATDatabaseTestRunner databaseContainer]];
+    [ATDatabaseTestRunner cleanDatabase];
+});
+
+afterAll(^{
+    [ATDatabaseTestRunner removeDatabase];
+});
+
+SPEC_END
+
+```
+
+* ActiceTouch also has a built-in kiwi matcher for validation purposes:
+
+```objective-c
+
+specify(^{
+  [[model should] beValid];
+});
 
 ```
 
