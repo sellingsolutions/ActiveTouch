@@ -10,7 +10,7 @@
 
 @class ATDatabaseContainer;
 
-@interface ATDatabaseCleaner : NSObject
+@interface ATDatabaseTestRunner : NSObject
 
 + (ATDatabaseContainer *)databaseContainer;
 + (void)openTestDatabaseNamed:(NSString *)databaseName;

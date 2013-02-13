@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ATViewController : UIViewController
+@interface ATViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
 
 @end

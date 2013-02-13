@@ -44,10 +44,10 @@
             
             NSMutableArray *collection = [NSMutableArray array];
             for (CouchQueryRow* row in query.rows) {
-                NSString *className = [row.value objectForKey:@"active_touch_model_class"];
-                Class class = NSClassFromString(className);
-                id model = [[class alloc] initWithExternalRepresentation:row.value];
-                [collection addObject:model];
+                id model = [self findByID:[row documentID]];
+                if (model) {
+                    [collection addObject:model];
+                }
             }
             successBlock(collection);
             
@@ -72,10 +72,10 @@
             
             NSMutableArray *collection = [NSMutableArray array];
             for (CouchQueryRow* row in query.rows) {
-                NSString *className = [row.value objectForKey:@"active_touch_model_class"];
-                Class class = NSClassFromString(className);
-                id model = [[class alloc] initWithExternalRepresentation:row.value];
-                [collection addObject:model];
+                id model = [self findByID:[row documentID]];
+                if (model) {
+                    [collection addObject:model];
+                }
             }
             successBlock(collection);
             

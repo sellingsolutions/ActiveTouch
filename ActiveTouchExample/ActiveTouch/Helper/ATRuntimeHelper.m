@@ -7,7 +7,6 @@
 //
 
 #import "ATRuntimeHelper.h"
-#import "ATModel.h"
 #import <objc/runtime.h>
 
 @implementation ATRuntimeHelper

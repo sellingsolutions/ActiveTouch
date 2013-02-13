@@ -8,7 +8,7 @@
 
 #import "Car.h"
 #import "ATModel.h"
-#import "ATDatabaseCleaner.h"
+#import "ATDatabaseTestRunner.h"
 #import "ATDatabaseContainer.h"
 #import <CouchCocoa/CouchCocoa.h>
 #import "CMFactory.h"
@@ -17,16 +17,16 @@
 SPEC_BEGIN(ATModelIntegrationSpec)
 
 beforeAll(^{
-    [ATDatabaseCleaner openTestDatabaseNamed:@"active_touch_example_test"];
+    [ATDatabaseTestRunner openTestDatabaseNamed:@"active_touch_example_test"];
 });
 
 beforeEach(^{
-    [ATDatabaseContainer stub:@selector(sharedInstance) andReturn:[ATDatabaseCleaner databaseContainer]];
-    [ATDatabaseCleaner cleanDatabase];
+    [ATDatabaseContainer stub:@selector(sharedInstance) andReturn:[ATDatabaseTestRunner databaseContainer]];
+    [ATDatabaseTestRunner cleanDatabase];
 });
 
 afterAll(^{
-    [ATDatabaseCleaner removeDatabase];
+    [ATDatabaseTestRunner removeDatabase];
 });
 
 describe(@"ATModel", ^{
@@ -47,7 +47,7 @@ describe(@"ATModel", ^{
             
             for(Car *car in cars) {
                 
-                CouchDocument *document = [[[ATDatabaseCleaner databaseContainer] database] untitledDocument];
+                CouchDocument *document = [[[ATDatabaseTestRunner databaseContainer] database] untitledDocument];
                 RESTOperation *operation = [document putProperties:[car externalRepresentation]];
                 [operation start];
                 [operation onCompletion:^{
@@ -95,7 +95,7 @@ describe(@"ATModel", ^{
             
             for(Car *car in cars) {
                 
-                CouchDocument *document = [[[ATDatabaseCleaner databaseContainer] database] untitledDocument];
+                CouchDocument *document = [[[ATDatabaseTestRunner databaseContainer] database] untitledDocument];
                 RESTOperation *operation = [document putProperties:[car externalRepresentation]];
                 [operation start];
                 [operation onCompletion:^{
@@ -142,7 +142,7 @@ describe(@"ATModel", ^{
                 return @"2011";
             }];
             expectedCar = [factory build];
-            CouchDatabase *database = [[ATDatabaseCleaner databaseContainer] database];
+            CouchDatabase *database = [[ATDatabaseTestRunner databaseContainer] database];
             CouchDocument *document = [database untitledDocument];
             NSDictionary *externalRepresentation = [expectedCar externalRepresentation];
             RESTOperation *operation = [document putProperties:externalRepresentation];

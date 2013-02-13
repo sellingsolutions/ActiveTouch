@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 ActiveTouch. All rights reserved.
 //
 
-#import "ATDatabaseCleaner.h"
+#import "ATDatabaseTestRunner.h"
 #import "ATDatabaseContainer.h"
 #import <CouchCocoa/CouchCocoa.h>
 #import "Kiwi.h"
 
 static ATDatabaseContainer *__container = nil;
 
-@implementation ATDatabaseCleaner
+@implementation ATDatabaseTestRunner
 
 + (ATDatabaseContainer *)databaseContainer
 {
