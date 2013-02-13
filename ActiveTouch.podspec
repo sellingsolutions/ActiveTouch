@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '5.0'
   s.ios.deployment_target = '5.0'
 
-  s.source_files = FileList['ActiveTouchExample/ActiveTouch/**/*.{h,m}']
+  s.source_files = 'ActiveTouchExample/ActiveTouch/Database/*.{h,m}', 'ActiveTouchExample/ActiveTouch/Model/*.{h,m}', 'ActiveTouchExample/ActiveTouch/Helper/*.{h,m}', 'ActiveTouchExample/ActiveTouch/SpecHelpers/*.{h,m}', 'ActiveTouchExample/ActiveTouch/SpecHelpers/Matchers/*.{h,m}' 
   
   s.dependency 'CouchCocoa', '~> 1.0'
   s.dependency 'TouchDB', '~> 1.0'
