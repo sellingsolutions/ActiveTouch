@@ -10,10 +10,7 @@
 #import "ATFormViewController.h"
 #import "Car.h"
 
-@interface ATViewController () {
-    UIActivityIndicatorView *_spinner;
-    UIBarButtonItem *_replacementButton;
-}
+@interface ATViewController ()
 
 @property (nonatomic, strong) NSMutableArray *cars;
 
@@ -119,24 +116,11 @@
 
 - (void)loadCars
 {
-    _replacementButton = self.refreshButton;
-    _spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    [_spinner hidesWhenStopped];
-    [_spinner startAnimating];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_spinner];
     [Car allWithSuccessBlock:^(NSArray *collection) {
         self.cars = [NSMutableArray arrayWithArray:collection];
         [self.tableView reloadData];
-        [_spinner stopAnimating];
-        _spinner = nil;
-        self.refreshButton = _replacementButton;
-        self.navigationItem.leftBarButtonItem = self.refreshButton;
     } withErrorBlock:^(NSError *error) {
         NSLog(@"Error: %@", error);
-        [_spinner stopAnimating];
-        _spinner = nil;
-        self.refreshButton = _replacementButton;
-        self.navigationItem.leftBarButtonItem = self.refreshButton;
     }];
 }
 
