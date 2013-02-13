@@ -157,7 +157,7 @@ car.year = @"aYear";
 
 ## Testing
 
-* ActiveTouch has support for running integration tests what you need to do is setup your kiwi specs like this:
+* ActiveTouch has support for running integration tests. What you need to do is setup your kiwi specs like this:
 
 ```objective-c
 
@@ -193,6 +193,12 @@ specify(^{
 });
 
 ```
+
+## Some notes
+
+The `ATModel` class inherits from `MTLModel` class from Github's [Mantle](https://github.com/github/Mantle),
+which can be used to unmarshall JSONs that comes from webservices calls.
+This make your integration with network frameworks, such as [AFNetworking](https://github.com/AFNetworking/AFNetworking), easier.
 
 ## Requirements
 
