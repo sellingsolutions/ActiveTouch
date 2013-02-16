@@ -38,7 +38,7 @@
 {
     NSArray *modelClasses = [ATRuntimeHelper classesThatInheritFromATModel];
     for (id modelClass in modelClasses) {
-        [modelClass registerView];
+        [modelClass registerViews];
     }
 }
 

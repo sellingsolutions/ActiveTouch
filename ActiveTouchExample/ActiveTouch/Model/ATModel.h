@@ -14,7 +14,8 @@
 @property (nonatomic, copy, readonly) NSString *_id;
 @property (nonatomic, copy, readonly) NSString *_rev;
 
-+ (void)registerView;
++ (void)registerViews;
++ (NSArray *)sortOrder;
 
 + (void)allWithSuccessBlock:(void(^)(NSArray *collection))successBlock withErrorBlock:(void(^)(NSError *error))errorBlock;
 + (void)allWithLimit:(NSUInteger)limit

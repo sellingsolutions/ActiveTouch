@@ -176,7 +176,7 @@
     }
 }
 
-+  (void)registerView
++  (void)registerViews
 {
     NSString *documentDesign = [self documentDesignName];
     NSString *viewName = [self viewName];
@@ -185,7 +185,7 @@
     [design defineViewNamed:viewName mapBlock:^(NSDictionary *doc, TDMapEmitBlock emit) {
         id className = [doc objectForKey:@"active_touch_model_class"];
         if ([[[self class] description] isEqualToString:className]) {
-            emit(className, doc);
+            emit([self orderValuesFromDictionary:doc], doc);
         }
     } version:@"1.0"];
 }
@@ -198,6 +198,21 @@
 + (NSString *)viewName
 {
     return [NSString stringWithFormat:@"%@_all_view", [[[self class] description] lowercaseString]];
+}
+
++ (NSArray *)sortOrder
+{
+    return @[@"_id"];
+}
+
++ (NSArray *)orderValuesFromDictionary:(NSDictionary *)documentProperties
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (NSString  *key in [self sortOrder]) {
+        [array addObject:[documentProperties objectForKey:key]];
+    }
+    return array;
 }
 
 @end

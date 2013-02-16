@@ -18,4 +18,9 @@
             };
 }
 
++ (NSArray *)sortOrder
+{
+    return @[@"model", @"year"];
+}
+
 @end

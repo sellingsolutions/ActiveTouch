@@ -155,6 +155,30 @@ car.year = @"aYear";
 
 ```
 
+* Adding more couch db views
+
+If want to add another couchdb view you can overrir the +(void)registerViews method of `ATModel` like this:
+
+```objective-c
+
++ (void)registerViews
+{
+	[super registerViews];
+	
+	//Add another view here
+}
+
+```
+
+* Changing the default view order
+
+When you call the all method it will order your documents by _id, if you would like to change the order do this:
+
++ (NSArray *)sortOrder
+{
+	return @[ @"name", @"age" ];
+}
+
 ## Testing
 
 * ActiveTouch has support for running integration tests. What you need to do is setup your kiwi specs like this:
