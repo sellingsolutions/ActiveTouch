@@ -174,10 +174,14 @@ If want to add another couchdb view you can overrir the +(void)registerViews met
 
 When you call the all method it will order your documents by _id, if you would like to change the order do this:
 
+```objective-c
+
 + (NSArray *)sortOrder
 {
 	return @[ @"name", @"age" ];
 }
+
+```
 
 ## Testing
 
