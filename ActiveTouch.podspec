@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name         = "ActiveTouch"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "ActiveRecord implementation for iOS using TouchDB."
   s.homepage     = "https://github.com/lucasmedeirosleite/ActiveTouch"
 
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   
   s.author       = { "Lucas Medeiros" => "lucastoc@gmail.com" }
   
-  s.source       = { :git => "https://github.com/lucasmedeirosleite/ActiveTouch.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/lucasmedeirosleite/ActiveTouch.git", :tag => "1.0.4" }
   
   s.requires_arc = true
 
