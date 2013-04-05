@@ -1,49 +1,50 @@
-
 PODS:
-- CMFactory (1.1.2):
-  - Mantle (~> 0.2.2)
-  - SBJson (~> 3.1.1)
-- CocoaAsyncSocket (0.0.1)
-- CocoaHTTPServer (2.2.1):
-  - CocoaAsyncSocket (~> 0.0.1)
-  - CocoaLumberjack (~> 1.3.0)
-- CocoaLumberjack (1.3.3)
-- CouchCocoa (1.0):
-  - JSONKit (~> 1.4)
-- JSONKit (1.5pre)
-- Kiwi (2.0.4)
-- MYUtilities (0.0.1)
-- Mantle (0.2.2):
-  - libextobjc/EXTKeyPathCoding
-  - libextobjc/EXTScope
-- SBJson (3.1.1)
-- TouchDB (1.0):
-  - CocoaHTTPServer
-  - JSONKit
-  - MYUtilities
-- libextobjc/EXTKeyPathCoding (0.2.5)
-- libextobjc/EXTScope (0.2.5)
+  - CMFactory (1.3.1):
+    - Mantle (= 1.0)
+    - SBJson (= 3.2)
+  - CocoaAsyncSocket (0.0.1)
+  - CocoaHTTPServer (2.3):
+    - CocoaAsyncSocket (~> 0.0.1)
+    - CocoaLumberjack
+  - CocoaLumberjack (1.6.2)
+  - CouchCocoa (1.0):
+    - JSONKit (~> 1.4)
+  - JSONKit (1.5pre)
+  - Kiwi (2.0.6)
+  - libextobjc/EXTKeyPathCoding (0.2.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.2.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.2.5)
+  - Mantle (1.0):
+    - libextobjc/EXTKeyPathCoding
+    - libextobjc/EXTScope
+  - MYUtilities (0.0.1)
+  - SBJson (3.2)
+  - TouchDB (1.0):
+    - CocoaHTTPServer
+    - JSONKit
+    - MYUtilities
 
 DEPENDENCIES:
-- CMFactory (= 1.1.2)
-- CouchCocoa (= 1.0)
-- Kiwi (= 2.0.4)
-- Mantle (= 0.2.2)
-- TouchDB (= 1.0)
+  - CMFactory (= 1.3.1)
+  - CouchCocoa (= 1.0)
+  - Kiwi (= 2.0.6)
+  - Mantle (= 1.0)
+  - TouchDB (= 1.0)
 
 SPEC CHECKSUMS:
-  CocoaAsyncSocket: 70f5de3c1ba13526c23df75fc98a0ea3049aa19c
-  CocoaHTTPServer: 188251009cdf2fb9f422e6979621b8942733cb22
-  CocoaLumberjack: 5b2c6e153a8b251dc4b5cea52138e5c2665e2eca
+  CMFactory: 508b53d3028b9d1b79202f6002943e6a90709973
+  CocoaAsyncSocket: 73c96a4225998adad0c94142010f65e5d12077de
+  CocoaHTTPServer: fae57be1739ba20b8b3e106d088e3dd55b12beb5
+  CocoaLumberjack: d73e1e317ced14ab930797dda6c17156ff17aaa1
   CouchCocoa: 016c17361972d2ee68820f4cb5ff3684570592cf
-  JSONKit: 3d4708953ea7ae399a49777372d8b060a43ddd27
-  Kiwi: 44abe10fc11eb6a9e05d580211abd1f8fdb01260
-  MYUtilities: 0aaa59590688bb9215bd1046a4cb1e8244eee928
-  Mantle: 190df0e0b65c0ebc13f2ed39e99248e630ad2616
+  JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
+  Kiwi: 56082a80f942de4d10423d8d8a599ab30cf50228
+  libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  Mantle: aa9860e40cc365a094ef60fec46848fee7b03ca7
+  MYUtilities: f719a298d53cf3ebdd87d7b9ba40a35a5bcf1aa6
+  SBJson: 4971016670e7b3fa04a36d4e72ab0fb1ad3a9f69
   TouchDB: 33719f0b15715f44e8c978064923e305d190b24b
-  libextobjc/EXTKeyPathCoding: 4a286cdbe966b6685b20a0a1444188a104ed3f40
-  libextobjc/EXTScope: 4a286cdbe966b6685b20a0a1444188a104ed3f40
-  CMFactory: 2cf71c868eb42eb1e72de7db73d10b400b6c0442
-  SBJson: d917ef596960a977b6c20235a90810bc306a48f0
 
-COCOAPODS: 0.16.2
+COCOAPODS: 0.17.2

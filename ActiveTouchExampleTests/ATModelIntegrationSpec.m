@@ -13,6 +13,7 @@
 #import <CouchCocoa/CouchCocoa.h>
 #import "CMFactory.h"
 #import "Kiwi.h"
+#import "MTLJSONAdapter.h"
 
 SPEC_BEGIN(ATModelIntegrationSpec)
 
@@ -48,7 +49,7 @@ describe(@"ATModel", ^{
             for(Car *car in cars) {
                 
                 CouchDocument *document = [[[ATDatabaseTestRunner databaseContainer] database] untitledDocument];
-                RESTOperation *operation = [document putProperties:[car externalRepresentation]];
+                RESTOperation *operation = [document putProperties:[MTLJSONAdapter JSONDictionaryFromModel:car]];
                 [operation start];
                 [operation onCompletion:^{
                     if (!operation.error) {
@@ -96,7 +97,7 @@ describe(@"ATModel", ^{
             for(Car *car in cars) {
                 
                 CouchDocument *document = [[[ATDatabaseTestRunner databaseContainer] database] untitledDocument];
-                RESTOperation *operation = [document putProperties:[car externalRepresentation]];
+                RESTOperation *operation = [document putProperties:[MTLJSONAdapter JSONDictionaryFromModel:car]];
                 [operation start];
                 [operation onCompletion:^{
                     if (!operation.error) {
@@ -144,7 +145,7 @@ describe(@"ATModel", ^{
             expectedCar = [factory build];
             CouchDatabase *database = [[ATDatabaseTestRunner databaseContainer] database];
             CouchDocument *document = [database untitledDocument];
-            NSDictionary *externalRepresentation = [expectedCar externalRepresentation];
+            NSDictionary *externalRepresentation = [MTLJSONAdapter JSONDictionaryFromModel:expectedCar];
             RESTOperation *operation = [document putProperties:externalRepresentation];
             [operation start];
             [operation onCompletion:^{

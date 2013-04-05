@@ -12,6 +12,6 @@
 @interface Car : ATModel
 
 @property (nonatomic, copy) NSString *model;
-@property (nonatomic, copy) NSString *year;
+@property (nonatomic, copy) NSNumber *year;
 
 @end

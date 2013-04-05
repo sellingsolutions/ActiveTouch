@@ -10,12 +10,13 @@
 
 @implementation Car
 
-+ (NSDictionary *)externalRepresentationKeyPathsByPropertyKey
++ (NSDictionary *)JSONKeyPathsByPropertyKey
 {
     return @{
              @"model" : @"model",
              @"year" : @"year"
-            };
+             };
+
 }
 
 + (NSArray *)sortOrder

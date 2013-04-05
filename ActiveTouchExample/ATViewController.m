@@ -53,7 +53,7 @@
     Car *car = [self.cars objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"carCell"];
     cell.textLabel.text = car.model;
-    cell.detailTextLabel.text = car.year;
+    cell.detailTextLabel.text = [car.year description];
     return cell;
 }
 

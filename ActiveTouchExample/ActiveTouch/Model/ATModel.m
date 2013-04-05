@@ -10,8 +10,14 @@
 #import <CouchCocoa/CouchCocoa.h>
 #import "ATDatabaseContainer.h"
 #import "ATModel.h"
+#import "MTLJSONAdapter.h"
 
 @implementation ATModel
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey
+{
+    return @{ @"_id" : @"_id", @"_rev" : @"_rev"};
+}
 
 + (id)findByID:(NSString *)_id
 {
@@ -19,7 +25,7 @@
     if (!document || [[[document properties] objectForKey:@"_deleted"] boolValue]) {
         return nil;
     }
-    id model = [[self alloc] initWithExternalRepresentation:[document properties]];
+    id model = [MTLJSONAdapter modelOfClass:[self class] fromJSONDictionary:[document properties] error:nil];
     return model;
 }
 
@@ -89,7 +95,7 @@
     if ([self isValid]) {
     
         CouchDocument *document = [[[ATDatabaseContainer sharedInstance] database] untitledDocument];
-        RESTOperation *operation = [document putProperties:[self externalRepresentation]];
+        RESTOperation *operation = [document putProperties:[MTLJSONAdapter JSONDictionaryFromModel:self]];
         [operation onCompletion:^{
             
             if (operation.error) {
@@ -135,7 +141,7 @@
     if ([self isValid]) {
         
         CouchDocument *document = [[[ATDatabaseContainer sharedInstance] database] documentWithID:__id];
-        RESTOperation *operation = [document putProperties:[self externalRepresentation]];
+        RESTOperation *operation = [document putProperties:[MTLJSONAdapter JSONDictionaryFromModel:self]];
         [operation onCompletion:^{
             
             if (operation.error) {
@@ -160,9 +166,9 @@
     return YES;
 }
 
-- (NSDictionary *)externalRepresentation
+- (NSDictionary *)dictionaryValue
 {
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:[super externalRepresentation]];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:[super dictionaryValue]];
     [self removeValueFromKey:@"_id" inDictionaryIfItsNil:dictionary];
     [self removeValueFromKey:@"_rev" inDictionaryIfItsNil:dictionary];
     [dictionary setObject:[[self class] description] forKey:@"active_touch_model_class"];

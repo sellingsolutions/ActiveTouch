@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     self.modelTextField.text = self.car.model;
-    self.yearTextField.text = self.car.year;
+    self.yearTextField.text = [self.car.year description];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +53,7 @@
 {
     [self.view endEditing:YES];
     self.car.model = self.modelTextField.text;
-    self.car.year = self.yearTextField.text;
+    self.car.year = [[NSNumber alloc] initWithInteger:[self.yearTextField.text integerValue]];
     
     if (self.car._id) {
     
